@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_lstsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgabelho <jgabelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/03 10:52:33 by jgabelho          #+#    #+#             */
-/*   Updated: 2018/12/11 19:38:30 by jgabelho         ###   ########.fr       */
+/*   Created: 2018/12/12 12:27:35 by jgabelho          #+#    #+#             */
+/*   Updated: 2018/12/12 12:47:50 by jgabelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 #include <stdlib.h>
 
-void	*ft_memalloc(size_t size)
+t_list		*ft_lstsplit(const char *s, char c)
 {
-	char	*fresh;
+	char		**tab;
+	t_list		*lst;
+	int			i;
 
-	fresh = malloc(size * sizeof(*fresh));
-	if (fresh == 0)
+	if (!s || !c)
 		return (0);
-	ft_bzero(fresh, size);
-	return ((void*)fresh);
+	if ((tab = ft_strsplit(s, c)) == 0)
+		return (0);
+	i = 0;
+	if (!tab[i])
+		return (0);
+	lst = 0;
+	while (i < ft_countword(s, c))
+	{
+		ft_lstadd(&lst, ft_lstnew(tab[i], ft_strlen(tab[i])));
+		i++;
+	}
+	free(tab);
+	return (lst);
 }

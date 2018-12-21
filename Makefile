@@ -6,12 +6,12 @@
 #    By: jgabelho <jgabelho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/26 16:20:30 by jgabelho          #+#    #+#              #
-#    Updated: 2018/12/09 13:56:03 by jgabelho         ###   ########.fr        #
+#    Updated: 2018/12/12 12:48:22 by jgabelho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -c
+CFLAGS = -Wall -Wextra -Werror -c -std=c89 -pedantic
 NAME = libft.a
 SRC = ft_atoi.c ft_itoa.c ft_memmove.c ft_putnbr_fd.c ft_strcpy.c ft_strlcat.c\
 ft_strnequ.c ft_strtrim.c ft_bzero.c ft_memalloc.c ft_memset.c ft_putstr.c\
@@ -23,7 +23,7 @@ ft_strncat.c ft_strsplit.c ft_isdigit.c ft_memcpy.c ft_putendl_fd.c\
 ft_strclr.c ft_striteri.c ft_strncmp.c ft_strstr.c ft_isprint.c ft_memdel.c\
 ft_putnbr.c ft_strcmp.c ft_strjoin.c ft_strncpy.c ft_strsub.c ft_lstnew.c\
 ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_countword.c\
-ft_copyaword.c ft_lstlen.c ft_lstget.c ft_lstlast.c
+ft_copyaword.c ft_lstlen.c ft_lstget.c ft_lstlast.c ft_lstsplit.c
 OBJECTS = ft_atoi.o ft_itoa.o ft_memmove.o ft_putnbr_fd.o ft_strcpy.o\
 ft_strlcat.o ft_strnequ.o ft_strtrim.o ft_bzero.o ft_memalloc.o ft_memset.o\
 ft_putstr.o ft_strdel.o ft_strlen.o ft_strnew.o ft_tolower.o ft_isalnum.o\
@@ -34,7 +34,8 @@ ft_striter.o ft_strncat.o ft_strsplit.o ft_isdigit.o ft_memcpy.o\
 ft_putendl_fd.o ft_strclr.o ft_striteri.o ft_strncmp.o ft_strstr.o\
 ft_isprint.o ft_memdel.o ft_putnbr.o ft_strcmp.o ft_strjoin.o ft_strncpy.o\
 ft_strsub.o ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o\
-ft_lstmap.o ft_countword.o ft_copyaword.o ft_lstlen.o ft_lstget.o ft_lstlast.o
+ft_lstmap.o ft_countword.o ft_copyaword.o ft_lstlen.o ft_lstget.o ft_lstlast.o\
+ft_lstsplit.o
 INCLUDES = libft.h
 
 all: $(NAME)
@@ -45,9 +46,9 @@ $(NAME): $(SRC) $(INCLUDES)
 	ranlib $(NAME)
 
 clean:
-	/bin/rm -f $(OBJECTS)
+	rm -f $(OBJECTS)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean $(NAME)
