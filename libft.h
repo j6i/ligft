@@ -6,7 +6,7 @@
 /*   By: jgabelho <jgabelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 16:29:19 by jgabelho          #+#    #+#             */
-/*   Updated: 2018/12/14 18:50:51 by jgabelho         ###   ########.fr       */
+/*   Updated: 2018/12/21 15:45:59 by jgabelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,8 +101,6 @@ int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
-
-char				*ft_strjoin(char const *s1, char const *s2);
 
 char				*ft_strjoin(char const *s1, char const *s2);
 
