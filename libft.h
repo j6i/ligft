@@ -6,7 +6,7 @@
 /*   By: jgabelho <jgabelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 16:29:19 by jgabelho          #+#    #+#             */
-/*   Updated: 2018/12/21 15:45:59 by jgabelho         ###   ########.fr       */
+/*   Updated: 2018/12/21 18:34:42 by jgabelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,7 +122,7 @@ void				ft_putchar_fd(char c, int fd);
 
 void				ft_putstr_fd(char *s, int fd);
 
-void				fd_putendl_fd(char const *s, int fd);
+void				ft_putendl_fd(char const *s, int fd);
 
 void				ft_putnbr_fd(int n, int fd);
 
