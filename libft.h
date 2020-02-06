@@ -6,7 +6,7 @@
 /*   By: jgabelho <jgabelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 16:29:19 by jgabelho          #+#    #+#             */
-/*   Updated: 2018/12/21 18:34:42 by jgabelho         ###   ########.fr       */
+/*   Updated: 2020/02/06 15:57:48 by jgabelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,4 +149,10 @@ t_list				*ft_lstget(t_list *lst, int n);
 t_list				*ft_lstlast(t_list *lst);
 
 t_list				*ft_lstsplit(const char *s, char c);
+
+void				ft_putdouble(double d);
+
+int     			ft_doublelen(double d);
+
+char				*ft_dtoa(long double d, int pres);
 #endif
